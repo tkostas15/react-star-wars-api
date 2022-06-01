@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+@font-face {
+  font-family: "jedi";
+  src: url("./fonts/Starjedi.woff2"), url("./fonts/Starjedi.woff"),
+    url("./fonts/Starjedi.ttf");
+  font-weight: 400;
+}
+main {width : 100%;flex : 1;}
+#root {min-height: 100vh; display : flex;display : -webkit-flex;justify-content : space-between;align-items: center;flex-direction : column;}

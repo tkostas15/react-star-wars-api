@@ -1,0 +1,20 @@
+.button {
+  display: inline-block;
+  padding: 1rem;
+  color: #ffffff;
+  background-color: transparent;
+  font: 400 2rem/100% jedi;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.button:disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):hover {
+  cursor: pointer;
+  color: yellow;
+}

@@ -1,0 +1,42 @@
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 90px;
+  max-height: 90px;
+  animation: loaderScale 2s ease-in-out 0s infinite;
+}
+
+@keyframes spinnerRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loaderScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  0% {
+    transform: scale(1);
+  }
+}

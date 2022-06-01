@@ -1,0 +1,41 @@
+.notFound {
+  position: fixed;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  width: calc(100% - 40px);
+  max-width: 500px;
+  animation: crawlShow 4s forwards linear 0s;
+}
+
+.notFound h1 {
+  font: 400 3rem jedi;
+  text-align: center;
+  margin-top: 0;
+}
+
+.notFound h2 {
+  font: 400 2.5rem jedi;
+  text-align: center;
+}
+
+.notFound p {
+  font: 400 2rem jedi;
+  text-align: center;
+}
+
+.force {
+  color: yellow;
+}
+
+@keyframes crawlShow {
+  0% {
+    bottom: 100%;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+}

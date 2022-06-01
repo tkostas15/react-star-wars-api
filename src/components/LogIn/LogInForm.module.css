@@ -1,0 +1,61 @@
+.loginFormWrapper {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.loginForm {
+  position: relative;
+  width: 100%;
+}
+
+.loginForm__control {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.loginForm__actions {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.loginForm__control label {
+  display: block;
+  color: #000;
+  -webkit-text-stroke: 1px yellow;
+  font: 400 3rem/100% jedi;
+  margin-bottom: 1.2rem;
+}
+.loginForm__control input {
+  display: block;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000;
+  font: 400 3rem/100% jedi;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+input.loginForm__error {
+  background-color: #ff00008f;
+  border: 1px solid #000;
+}
+
+.loginForm__warning {
+  color: red;
+  font: 400 1.4rem jedi;
+  letter-spacing: 2px;
+}
+
+

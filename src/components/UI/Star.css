@@ -1,0 +1,7 @@
+.star {
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 50%;
+  filter: blur(2px);
+}

@@ -1,0 +1,11 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap";
+h1 {display : block;width : 100%;text-align : center;color : yellow;font : 400 3rem "Roboto"}
+h1 p {margin : 1rem;}
+h1 p:first-child {margin-top : 0;}
+h1 p:last-child {margin-bottom : 0;}
+.tableWrapper {position : relative;width : calc(100% - 40px);overflow : auto;margin : 0 auto}
+.table {font : 100 2rem Roboto;position : relative;margin : 0 auto;width : 100%;padding :0;border-collapse : separate;border-spacing : 0 1rem;table-layout : auto !important}
+.table thead {margin-bottom : 2rem;color : #ffff00;background-color : #000000;z-index : 2;position : sticky;position : -webkit-sticky;top : 0;}
+.table th {padding : 1rem;white-space : nowrap;text-align : left;border : 1px solid #ffff00}
+.table tbody {color : #ffffff;z-index : 1}
+.table tbody td {text-align : left;vertical-align : top;padding : 1rem;border : 1px solid #686868}

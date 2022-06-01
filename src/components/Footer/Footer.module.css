@@ -1,0 +1,4 @@
+.footer {display : block;width : 100%;text-align : center;background-color : transparent;color : #ffffff;font : 400 1.7rem "Roboto";margin-top : 3rem;}
+.footer > div {display : flex;display : -webkit-flex;justify-content : center;align-items: center;padding : .5rem 1rem;gap:1rem}
+.footer a {color : #ffffff;text-decoration: none}
+.footer a:hover {cursor : pointer;color : yellow;}
