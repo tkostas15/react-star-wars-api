@@ -1,26 +1,27 @@
 // imports for redux
 import { configureStore } from "@reduxjs/toolkit";
-import createSagaMiddleware from 'redux-saga';
+import createSagaMiddleware from "redux-saga";
 
 // import slices
 import { authReducer } from "./authentication";
+import { uiInitializationSliceReducer } from "./uiInitialization";
 import { filmsReducer } from "./films";
 
 // sagas
-import { apiFetchStart, apiFetchSucceeded, apiFetchFailed } from "../sagas/filmsSagas";
+import rootSagas from "../sagas/rootSagas";
 const sagaMiddleware = createSagaMiddleware();
 
 // store (only one)
 const reduxStore = configureStore({
-                                      reducer   : {
-                                          authReducer,
-                                          filmsReducer,
-                                      },
-                                      middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
-                                  });
+  reducer: {
+    authReducer,
+    filmsReducer,
+    uiInitializationSliceReducer,
+  },
+  middleware: [sagaMiddleware],
+});
+
+sagaMiddleware.run(rootSagas);
 
 // export actions and store
 export default reduxStore;
-
-// dispatch saga action
-export const dispatchSaga = type => reduxStore.dispatch({type});
