@@ -21,5 +21,5 @@ const authSlice        = createSlice({
 export const isAuthenticatedLocalStorage = () => { return localStorage.getItem('isAuthenticated') === 'true'; };
 
 // export
-export default authSlice.reducer;
+export const authReducer = authSlice.reducer;
 export const authActions = authSlice.actions;
