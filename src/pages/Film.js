@@ -1,6 +1,5 @@
 // imports
-import { useSelector } from "react-redux";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import FilmInfo from '../components/FilmInfo/FilmInfo';
 import { Fragment, useEffect, useState } from "react";
 import useHttp from "../hooks/use-http";
@@ -13,9 +12,6 @@ import Footer from "../components/Footer/Footer";
 const Film = (props) => {
     // get router parameters
     const routerParams = useParams();
-    
-    // redux selector
-    const isAuthenticated = useSelector(state => state.authReducer.isAuthenticated);
     
     // states
     const [filmInfo, setFilmInfo] = useState(null);
@@ -59,38 +55,33 @@ const Film = (props) => {
         httpSendRequest({url: 'https://swapi.dev/api/films/' + filmId}, filmInfoHandler);
     }, [httpSendRequest, retry, filmId]);
     
-    // return to welcome
-    if (!isAuthenticated) { return <Navigate to="/welcome" />; }
-    
-    // return film
-    else {
-        // error values
-        let errorDescription;
-        if (httpError) {
-            errorDescription = (httpError === 'abort') ?
-                               <div>Spacecraft could not land on this inhabited land</div> :
-                               <div>Error on landing!</div>;
-        }
-        
-        // retry
-        const retryHandler = () => {setRetry(true)};
-    
-        // back handler
-        const goBackHandler = () => { history(-1); };
-        
-        // return info at last
-        return (
-            <Fragment>
-                <Header hasBack={1} onClickBack={goBackHandler} />
-                <main>
-                    {!httpIsSending && !httpError && <FilmInfo info={filmInfo} />}
-                    {!httpIsSending && httpError && <Modal description={errorDescription} button='retry' onClick={retryHandler} />}
-                    {httpIsSending && <Spinner icon={loadSpinner} ms="1500" />}
-                </main>
-                <Footer />
-            </Fragment>
-        )
+    // error values
+    let errorDescription;
+    if (httpError) {
+        errorDescription = (httpError === 'abort') ?
+                           <div>Spacecraft could not land on this inhabited land</div> :
+                           <div>Error on landing!</div>;
     }
+    
+    // retry
+    const retryHandler = () => {setRetry(true)};
+    
+    // back handler
+    const goBackHandler = () => { history(-1); };
+    
+    // return info at last
+    return <Fragment>
+        <Header hasBack={1} onClickBack={goBackHandler} />
+        <main>
+            {!httpIsSending && !httpError &&
+             <FilmInfo info={filmInfo} />}
+            {!httpIsSending && httpError &&
+             <Modal description={errorDescription} button='retry' onClick={retryHandler} />}
+            {httpIsSending &&
+             <Spinner icon={loadSpinner} ms="1500" />}
+        </main>
+        <Footer />
+    </Fragment>;
 };
 
 export default Film;
