@@ -1,21 +1,27 @@
 // imports
-import { useNavigate, useParams } from "react-router-dom";
-import FilmInfo from '../components/FilmInfo/FilmInfo';
+import { useNavigate, useParams }        from "react-router-dom";
+import FilmInfo                          from '../components/FilmInfo/FilmInfo';
 import { Fragment, useEffect, useState } from "react";
-import useHttp from "../hooks/use-http";
-import Spinner from "../components/UI/Spinner";
-import loadSpinner from "../icons/darth_vader_loader.png";
-import Header from "../components/Header/Header";
-import Modal from "../components/UI/Modal";
-import Footer from "../components/Footer/Footer";
+import Spinner                           from "../components/UI/Spinner";
+import loadSpinner                       from "../icons/darth_vader_loader.png";
+import Header                            from "../components/Header/Header";
+import Modal                             from "../components/UI/Modal";
+import Footer                            from "../components/Footer/Footer";
+import { useDispatch, useSelector }      from "react-redux";
+import { fetchFilmInfoStart }            from '../store/filmSlice';
 
 const Film = (props) => {
     // get router parameters
     const routerParams = useParams();
     
+    // retrieve slice states
+    const fetchedInfo        = useSelector((state) => state.filmReducer.fetchedInfo);
+    const httpIsSending      = useSelector((state) => state.filmReducer.sending);
+    const httpError          = useSelector((state) => state.filmReducer.error);
+    const httpAlreadyFetched = useSelector((state) => state.filmReducer.atLeastOneFetch);
+    
     // states
-    const [filmInfo, setFilmInfo] = useState(null);
-    const [retry, setRetry]       = useState(false);
+    const [retry, setRetry] = useState(false);
     
     // film id
     const filmId = routerParams.filmId;
@@ -23,37 +29,14 @@ const Film = (props) => {
     // history
     const history = useNavigate();
     
-    // set up (initialize) http hook to fetch data
-    const {httpIsSending, httpError, httpSendRequest} = useHttp();
+    // dispatch action
+    const dispatchAction = useDispatch();
     
-    // fetch data with useEffect
+    // fetch movie's info
     useEffect(() => {
-        setRetry(false);
-        
-        // film info handler
-        const filmInfoHandler = (data) => {
-            const tempInfo = [{
-                id           : filmId,
-                episode      : data.episode_id,
-                title        : data.title,
-                director     : data.director,
-                release_date : data.release_date,
-                created      : data.created,
-                opening_crawl: data.opening_crawl,
-                producer     : data.producer,
-                starships    : data.starships,
-                vehicles     : data.vehicles,
-                characters   : data.characters,
-                species      : data.species,
-                planets      : data.planets,
-                edited       : data.edited,
-            }];
-            setFilmInfo(tempInfo);
-        };
-        
-        // send request
-        httpSendRequest({url: 'https://swapi.dev/api/films/' + filmId}, filmInfoHandler);
-    }, [httpSendRequest, retry, filmId]);
+        const apiToUse = {api: 'https://swapi.dev/api/films/' + filmId + '/'};
+        dispatchAction(fetchFilmInfoStart(apiToUse));
+    }, [dispatchAction, retry, filmId]);
     
     // error values
     let errorDescription;
@@ -73,12 +56,9 @@ const Film = (props) => {
     return <Fragment>
         <Header hasBack={1} onClickBack={goBackHandler} />
         <main>
-            {!httpIsSending && !httpError &&
-             <FilmInfo info={filmInfo} />}
-            {!httpIsSending && httpError &&
-             <Modal description={errorDescription} button='retry' onClick={retryHandler} />}
-            {httpIsSending &&
-             <Spinner icon={loadSpinner} ms="1500" />}
+            {!httpIsSending && !httpError && httpAlreadyFetched && <FilmInfo info={fetchedInfo} />}
+            {!httpIsSending && httpError && <Modal description={errorDescription} button='retry' onClick={retryHandler} />}
+            {httpIsSending && <Spinner icon={loadSpinner} ms="1500" />}
         </main>
         <Footer />
     </Fragment>;

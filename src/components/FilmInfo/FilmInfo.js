@@ -1,13 +1,13 @@
-import styles from "./FilmInfo.module.css";
+import styles               from "./FilmInfo.module.css";
 import { format, parseISO } from "date-fns";
-import { Fragment } from "react";
+import { Fragment }         from "react";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
-import BootstrapTable from "react-bootstrap-table-next";
+import BootstrapTable       from "react-bootstrap-table-next";
 
 const FilmInfo = (props) => {
     // info set up
-    let info = props.info;
+    const info = props.info;
     
     // set up bootstrap
     const columns = [

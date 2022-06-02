@@ -1,16 +1,18 @@
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
-import styles from "./FilmsTable.module.css";
-import BootstrapTable from "react-bootstrap-table-next";
+import styles                        from "./FilmsTable.module.css";
+import BootstrapTable                from "react-bootstrap-table-next";
 import filterFactory, { textFilter } from "react-bootstrap-table2-filter";
-import { Fragment } from "react/cjs/react.production.min";
-import { format, parseISO } from "date-fns";
-import { Link } from "react-router-dom";
+import { Fragment }                  from "react/cjs/react.production.min";
+import { format, parseISO }          from "date-fns";
+import { Link }                      from "react-router-dom";
 
 const FilmsTable = (props) => {
     // Create the bootstrap table
-    const filmsTable = props.films;
-    const columns    = [
+    let filmsTable = props.films;
+    
+    // set up bootstrap
+    const columns = [
         {
             dataField: "title",
             text     : "Title",
