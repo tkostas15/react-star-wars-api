@@ -1,13 +1,13 @@
-import {Navigate} from "react-router-dom";
-import {isAuthenticatedLocalStorage} from '../store/authentication';
+import { Navigate } from "react-router-dom";
+import { getIsAuthenticatedUsingLocalStorage } from "../store/authSlice";
 import { useSelector } from "react-redux";
 
 const NotAuthorized = (props) => {
-    // get is authenticated
-    const isAuthenticated = useSelector(isAuthenticatedLocalStorage);
-    
-    // navigate depending on authenticated
-    return (!isAuthenticated) ? props.children : <Navigate to='/films' replace/>;
+  // get is authenticated
+  const isAuthenticated = useSelector(getIsAuthenticatedUsingLocalStorage);
+
+  // navigate depending on authenticated
+  return !isAuthenticated ? props.children : <Navigate to="/films" replace />;
 };
 
 export default NotAuthorized;
