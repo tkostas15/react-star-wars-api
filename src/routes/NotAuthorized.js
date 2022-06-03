@@ -1,10 +1,10 @@
 import { Navigate } from "react-router-dom";
-import { isAuthenticatedLocalStorage } from "../store/authSlice";
+import { getIsAuthenticatedUsingLocalStorage } from "../store/authSlice";
 import { useSelector } from "react-redux";
 
 const NotAuthorized = (props) => {
   // get is authenticated
-  const isAuthenticated = useSelector(isAuthenticatedLocalStorage);
+  const isAuthenticated = useSelector(getIsAuthenticatedUsingLocalStorage);
 
   // navigate depending on authenticated
   return !isAuthenticated ? props.children : <Navigate to="/films" replace />;
