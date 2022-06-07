@@ -127,4 +127,8 @@ dist
 .pnp.*
 
 # webstorm
-.idea
+.idea/
+
+# cypress
+cypress/
+cypress.*
