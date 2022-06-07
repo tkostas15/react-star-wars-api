@@ -37,7 +37,11 @@ const LogInForm = () => {
   return (
     <Fragment>
       <div className={styles.loginFormWrapper}>
-        <form className={styles.loginForm} onSubmit={formSubmitHandler}>
+        <form
+          className={styles.loginForm}
+          onSubmit={formSubmitHandler}
+          data-testid="loginForm"
+        >
           <div className={styles.loginForm__control}>
             <label htmlFor="logInUserName"> username </label>
             <input
@@ -47,6 +51,7 @@ const LogInForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.logInUserName}
+              data-testid="usernameInput"
             />
             {formik.errors.username && (
               <span className={styles.loginForm__warning}>
@@ -65,6 +70,7 @@ const LogInForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.logInPassword}
+              data-testid="passwordInput"
             />
             {formik.errors.password && (
               <span className={styles.loginForm__warning}>
