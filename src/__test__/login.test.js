@@ -2,19 +2,16 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "../App";
 import { Provider } from "react-redux";
-import configureStore from "redux-mock-store";
+import reduxStore from "../store/store";
 import { BrowserRouter } from "react-router-dom";
 
-describe("[TEST SUITE] Log in form", () => {
-  const initialState = { output: 10 };
-  const mockStore = configureStore();
-  let store;
-  store = mockStore(initialState);
+global.React = React;
 
+describe("[TEST SUITE] Log in form", () => {
   beforeEach(() => {
     return render(
       <BrowserRouter>
-        <Provider store={store}>
+        <Provider store={reduxStore}>
           <App />
         </Provider>
       </BrowserRouter>

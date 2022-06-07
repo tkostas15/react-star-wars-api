@@ -128,7 +128,3 @@ dist
 
 # webstorm
 .idea/
-
-# cypress
-cypress/
-cypress.*
