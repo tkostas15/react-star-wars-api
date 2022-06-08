@@ -1,0 +1,419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Films should load table 1`] = `
+<div
+  class="tableWrapper"
+  data-testid="films"
+>
+  <div
+    class="react-bootstrap-table"
+  >
+    <table
+      class="table table-bordered table"
+    >
+      <thead>
+        <tr>
+          <th
+            tabindex="0"
+          >
+            Title
+            <label
+              class="filter-label"
+              for="text-filter-column-title"
+            >
+              <span
+                class="sr-only"
+              >
+                Filter by 
+                Title
+              </span>
+              <input
+                class="filter text-filter form-control undefined"
+                delay="500"
+                id="text-filter-column-title"
+                placeholder="Enter Title..."
+                style="display: block; margin: 1rem 0px 0px; background-color: transparent; border: 1px solid #ffffff; color: rgb(255, 255, 255); padding: .5rem;"
+                type="text"
+                value=""
+              />
+            </label>
+          </th>
+          <th
+            tabindex="0"
+          >
+            Opening crawl
+          </th>
+          <th
+            tabindex="0"
+          >
+            Director
+          </th>
+          <th
+            tabindex="0"
+          >
+            Producer
+          </th>
+          <th
+            tabindex="0"
+          >
+            Release Date
+          </th>
+          <th
+            tabindex="0"
+          >
+            URL
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            style="white-space: nowrap;"
+          >
+            A New Hope
+          </td>
+          <td
+            style="font-style: italic; line-height: 1.5; min-width: 450px;"
+          >
+            It is a period of civil war.
+Rebel spaceships, striking
+from a hidden base, have won
+their first victory against
+the evil Galactic Empire.
+
+During the battle, Rebel
+spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+sinister agents, Princess
+Leia races home aboard her
+starship, custodian of the
+stolen plans that can save her
+people and restore
+freedom to the galaxy....
+          </td>
+          <td
+            style="white-space: nowrap;"
+          >
+            George Lucas
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Gary Kurtz
+            </div>
+            <div>
+              Rick McCallum
+            </div>
+          </td>
+          <td>
+            <div>
+              25/05/1977
+            </div>
+          </td>
+          <td>
+            <a
+              class="link"
+              href="/films/1"
+            >
+              Check movie
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="white-space: nowrap;"
+          >
+            The Empire Strikes Back
+          </td>
+          <td
+            style="font-style: italic; line-height: 1.5; min-width: 450px;"
+          >
+            It is a dark time for the
+Rebellion. Although the Death
+Star has been destroyed,
+Imperial troops have driven the
+Rebel forces from their hidden
+base and pursued them across
+the galaxy.
+
+Evading the dreaded Imperial
+Starfleet, a group of freedom
+fighters led by Luke Skywalker
+has established a new secret
+base on the remote ice world
+of Hoth.
+
+The evil lord Darth Vader,
+obsessed with finding young
+Skywalker, has dispatched
+thousands of remote probes into
+the far reaches of space....
+          </td>
+          <td
+            style="white-space: nowrap;"
+          >
+            Irvin Kershner
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Gary Kurtz
+            </div>
+            <div>
+              Rick McCallum
+            </div>
+          </td>
+          <td>
+            <div>
+              17/05/1980
+            </div>
+          </td>
+          <td>
+            <a
+              class="link"
+              href="/films/2"
+            >
+              Check movie
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="white-space: nowrap;"
+          >
+            Return of the Jedi
+          </td>
+          <td
+            style="font-style: italic; line-height: 1.5; min-width: 450px;"
+          >
+            Luke Skywalker has returned to
+his home planet of Tatooine in
+an attempt to rescue his
+friend Han Solo from the
+clutches of the vile gangster
+Jabba the Hutt.
+
+Little does Luke know that the
+GALACTIC EMPIRE has secretly
+begun construction on a new
+armored space station even
+more powerful than the first
+dreaded Death Star.
+
+When completed, this ultimate
+weapon will spell certain doom
+for the small band of rebels
+struggling to restore freedom
+to the galaxy...
+          </td>
+          <td
+            style="white-space: nowrap;"
+          >
+            Richard Marquand
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Howard G. Kazanjian
+            </div>
+            <div>
+              George Lucas
+            </div>
+            <div>
+              Rick McCallum
+            </div>
+          </td>
+          <td>
+            <div>
+              25/05/1983
+            </div>
+          </td>
+          <td>
+            <a
+              class="link"
+              href="/films/3"
+            >
+              Check movie
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="white-space: nowrap;"
+          >
+            The Phantom Menace
+          </td>
+          <td
+            style="font-style: italic; line-height: 1.5; min-width: 450px;"
+          >
+            Turmoil has engulfed the
+Galactic Republic. The taxation
+of trade routes to outlying star
+systems is in dispute.
+
+Hoping to resolve the matter
+with a blockade of deadly
+battleships, the greedy Trade
+Federation has stopped all
+shipping to the small planet
+of Naboo.
+
+While the Congress of the
+Republic endlessly debates
+this alarming chain of events,
+the Supreme Chancellor has
+secretly dispatched two Jedi
+Knights, the guardians of
+peace and justice in the
+galaxy, to settle the conflict....
+          </td>
+          <td
+            style="white-space: nowrap;"
+          >
+            George Lucas
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Rick McCallum
+            </div>
+          </td>
+          <td>
+            <div>
+              19/05/1999
+            </div>
+          </td>
+          <td>
+            <a
+              class="link"
+              href="/films/4"
+            >
+              Check movie
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="white-space: nowrap;"
+          >
+            Attack of the Clones
+          </td>
+          <td
+            style="font-style: italic; line-height: 1.5; min-width: 450px;"
+          >
+            There is unrest in the Galactic
+Senate. Several thousand solar
+systems have declared their
+intentions to leave the Republic.
+
+This separatist movement,
+under the leadership of the
+mysterious Count Dooku, has
+made it difficult for the limited
+number of Jedi Knights to maintain 
+peace and order in the galaxy.
+
+Senator Amidala, the former
+Queen of Naboo, is returning
+to the Galactic Senate to vote
+on the critical issue of creating
+an ARMY OF THE REPUBLIC
+to assist the overwhelmed
+Jedi....
+          </td>
+          <td
+            style="white-space: nowrap;"
+          >
+            George Lucas
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Rick McCallum
+            </div>
+          </td>
+          <td>
+            <div>
+              16/05/2002
+            </div>
+          </td>
+          <td>
+            <a
+              class="link"
+              href="/films/5"
+            >
+              Check movie
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="white-space: nowrap;"
+          >
+            Revenge of the Sith
+          </td>
+          <td
+            style="font-style: italic; line-height: 1.5; min-width: 450px;"
+          >
+            War! The Republic is crumbling
+under attacks by the ruthless
+Sith Lord, Count Dooku.
+There are heroes on both sides.
+Evil is everywhere.
+
+In a stunning move, the
+fiendish droid leader, General
+Grievous, has swept into the
+Republic capital and kidnapped
+Chancellor Palpatine, leader of
+the Galactic Senate.
+
+As the Separatist Droid Army
+attempts to flee the besieged
+capital with their valuable
+hostage, two Jedi Knights lead a
+desperate mission to rescue the
+captive Chancellor....
+          </td>
+          <td
+            style="white-space: nowrap;"
+          >
+            George Lucas
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Rick McCallum
+            </div>
+          </td>
+          <td>
+            <div>
+              19/05/2005
+            </div>
+          </td>
+          <td>
+            <a
+              class="link"
+              href="/films/6"
+            >
+              Check movie
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

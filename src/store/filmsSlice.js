@@ -28,9 +28,15 @@ const filmsSlice = createSlice({
 });
 
 // export state selectors
-export const getFilms = ({ films }) => films.fetchedFilms;
-export const getIsSending = ({ films }) => films.sending;
-export const getError = ({ films }) => films.error;
+export const getFilms = ({ films }) => {
+  return films.fetchedFilms;
+};
+export const getIsSending = ({ films }) => {
+  return films.sending;
+};
+export const getError = ({ films }) => {
+  return films.error;
+};
 export const getFetched = ({ films }) => films.atLeastOneFetch;
 
 // export reducer
