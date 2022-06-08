@@ -10,14 +10,15 @@ import { filmReducer } from "./filmSlice";
 // sagas
 import rootSagas from "../sagas/rootSagas";
 const sagaMiddleware = createSagaMiddleware();
+export const rootReducer = {
+  auth: authReducer,
+  films: filmsReducer,
+  film: filmReducer,
+};
 
 // store (only one)
 const reduxStore = configureStore({
-  reducer: {
-    auth: authReducer,
-    films: filmsReducer,
-    film: filmReducer,
-  },
+  reducer: rootReducer,
   middleware: [sagaMiddleware],
 });
 sagaMiddleware.run(rootSagas);
