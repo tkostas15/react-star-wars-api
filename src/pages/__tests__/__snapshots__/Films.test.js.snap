@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Films should load table 1`] = `
+exports[`[TEST SUITE] Check films page [TEST] Check films table exists 1`] = `
 <div
   class="tableWrapper"
   data-testid="films"

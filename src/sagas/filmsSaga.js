@@ -11,7 +11,7 @@ function* watchToFetchFilmsSaga(action) {
     const fetchHeaders = action.payload.headers ? action.payload.headers : {};
     const fetchBody = action.payload.body ? action.payload.body : null;
     // controller and timeout
-    const msToWait = fetchTimeout ? fetchTimeout : 4000;
+    const msToWait = fetchTimeout ? fetchTimeout : 10000;
     const abortController = new AbortController();
     const timeoutId = setTimeout(() => {
       abortController.abort();

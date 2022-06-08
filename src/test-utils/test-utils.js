@@ -6,6 +6,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import rootSagas from "../sagas/rootSagas";
+import { BrowserRouter } from "react-router-dom";
 
 import { rootReducer } from "../store/store";
 
@@ -19,7 +20,7 @@ function render(
   {
     initialState = {},
     middlewares = [],
-
+    debug = false,
     extraProps,
     sagas = rootSagas,
     ...renderOptions
@@ -32,16 +33,18 @@ function render(
   });
   function Wrapper({ children, ...restProps }) {
     return (
-      <Provider store={store} {...restProps}>
-        {children}
-      </Provider>
+      <BrowserRouter>
+        <Provider store={store} {...restProps}>
+          {children}
+        </Provider>
+      </BrowserRouter>
     );
   }
 
   storeRedux = store;
 
   if (sagas instanceof Function) {
-    console.log("running sagas", sagas);
+    if (debug) console.log("running sagas", sagas);
     sagaMiddleware.run(sagas);
   }
 
