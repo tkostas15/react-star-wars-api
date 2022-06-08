@@ -12,7 +12,7 @@ describe("Films", () => {
     expect(true).toBe(true);
   });
 
-  it.only("should load table", async () => {
+  it("should load table", async () => {
     server.use(...mockFilmsResponseHandlers);
 
     const FilmsWithBrowser = () => (
@@ -30,6 +30,5 @@ describe("Films", () => {
     expect(table).toMatchSnapshot();
     // console.log("table", table);
     expect(table).toBeInTheDocument();
-    expect(true).toBe(true);
   });
 });

@@ -1,7 +1,6 @@
 // imports
-import { call, put } from "redux-saga/effects";
+import { put } from "redux-saga/effects";
 import { fetchFilmsSuccess, fetchFilmsFail } from "../store/filmsSlice";
-import * as API from "./API";
 // sagas
 function* watchToFetchFilmsSaga(action) {
   try {
@@ -11,29 +10,26 @@ function* watchToFetchFilmsSaga(action) {
     const fetchMethod = action.payload.method ? action.payload.method : "GET";
     const fetchHeaders = action.payload.headers ? action.payload.headers : {};
     const fetchBody = action.payload.body ? action.payload.body : null;
-    // // controller and timeout
+    // controller and timeout
     const msToWait = fetchTimeout ? fetchTimeout : 4000;
-    // const abortController = new AbortController();
-    // const timeoutId = setTimeout(() => {
-    //   abortController.abort();
-    // }, msToWait);
+    const abortController = new AbortController();
+    const timeoutId = setTimeout(() => {
+      abortController.abort();
+    }, msToWait);
 
     // send request
-    const responseData = yield call(API.getFilms, { fetchApi });
-    // const response = yield fetch(fetchApi, {
-    //   method: fetchMethod,
-    //   headers: fetchHeaders,
-    //   body: fetchBody,
-    //   signal: abortController.signal,
-    // });
+    const response = yield fetch(fetchApi, {
+      method: fetchMethod,
+      headers: fetchHeaders,
+      body: fetchBody,
+      signal: abortController.signal,
+    });
 
-    // clearTimeout(timeoutId);
-    // // request error => throw error
-    // if (!response.ok) throw new Error("Request failed!");
-    // request success => return data
+    clearTimeout(timeoutId);
+    // request error => throw error
+    if (!response.ok) throw new Error("Request failed!");
 
-    // console.log("response", response.json);
-    // const responseData = yield response.json();
+    const responseData = yield response.json();
 
     yield put(fetchFilmsSuccess(responseData.results));
   } catch (error) {
