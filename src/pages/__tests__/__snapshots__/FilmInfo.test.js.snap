@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[TEST SUITE] Check film info page [TEST] Check film info table exists 1`] = `
+<div
+  class="tableWrapper"
+  data-testid="film"
+>
+  <div
+    class="react-bootstrap-table"
+  >
+    <table
+      class="table table-bordered table"
+    >
+      <thead>
+        <tr>
+          <th
+            tabindex="0"
+          >
+            Title
+          </th>
+          <th
+            tabindex="0"
+          >
+            Opening crawl
+          </th>
+          <th
+            tabindex="0"
+          >
+            Director
+          </th>
+          <th
+            tabindex="0"
+          >
+            Producer(s)
+          </th>
+          <th
+            tabindex="0"
+          >
+            Release date
+          </th>
+          <th
+            tabindex="0"
+          >
+            Characters (No)
+          </th>
+          <th
+            tabindex="0"
+          >
+            Planets (No)
+          </th>
+          <th
+            tabindex="0"
+          >
+            Starships (No)
+          </th>
+          <th
+            tabindex="0"
+          >
+            Vehicles (No)
+          </th>
+          <th
+            tabindex="0"
+          >
+            Species (No)
+          </th>
+          <th
+            tabindex="0"
+          >
+            Created date
+          </th>
+          <th
+            tabindex="0"
+          >
+            Edited date
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            A New Hope
+          </td>
+          <td
+            style="font-style: italic; line-height: 1.5; min-width: 450px;"
+          >
+            It is a period of civil war.
+Rebel spaceships, striking
+from a hidden base, have won
+their first victory against
+the evil Galactic Empire.
+
+During the battle, Rebel
+spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+sinister agents, Princess
+Leia races home aboard her
+starship, custodian of the
+stolen plans that can save her
+people and restore
+freedom to the galaxy....
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            George Lucas
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Gary Kurtz
+            </div>
+            <div>
+              Rick McCallum
+            </div>
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              May 25th, 1977
+            </div>
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            18
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            3
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            8
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            4
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            5
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Dec 10th, 2014
+            </div>
+          </td>
+          <td
+            style="white-space: nowrap; line-height: 1.5;"
+          >
+            <div>
+              Dec 20th, 2014
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
