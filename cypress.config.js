@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: "http://localhost:51549",
+    baseUrl: "http://localhost:3000",
     specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
     excludeSpecPattern: "*ignore.js",
     defaultCommandTimeout: 10000,

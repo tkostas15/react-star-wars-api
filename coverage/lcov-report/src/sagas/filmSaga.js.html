@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.94% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/19</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">41.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/12</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.23% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/17</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -130,38 +130,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,7 +175,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -190,37 +190,37 @@ import { put }                                     from 'redux-saga/effects';
 import { fetchFilmInfoSuccess, fetchFilmInfoFail } from "../store/filmSlice";
 &nbsp;
 // sagas
-function* watchToFetchFilmInfoSaga (action) {
-    try {
+function* <span class="fstat-no" title="function not covered" >watchToFetchFilmInfoSaga </span>(action) {
+<span class="cstat-no" title="statement not covered" >    try {</span>
         // get api info
-        const fetchApi     = action.payload.api;
-        const fetchTimeout = action.payload.timeout;
-        const fetchMethod  = (action.payload.method) ? <span class="branch-0 cbranch-no" title="branch not covered" >action.payload.method </span>: 'GET';
-        const fetchHeaders = (action.payload.headers) ? <span class="branch-0 cbranch-no" title="branch not covered" >action.payload.headers </span>: {};
-        const fetchBody    = (action.payload.body) ? <span class="branch-0 cbranch-no" title="branch not covered" >action.payload.body </span>: null;
+        const fetchApi     = <span class="cstat-no" title="statement not covered" >action.payload.api;</span>
+        const fetchTimeout = <span class="cstat-no" title="statement not covered" >action.payload.timeout;</span>
+        const fetchMethod  = <span class="cstat-no" title="statement not covered" >(action.payload.method) ? action.payload.method : 'GET';</span>
+        const fetchHeaders = <span class="cstat-no" title="statement not covered" >(action.payload.headers) ? action.payload.headers : {};</span>
+        const fetchBody    = <span class="cstat-no" title="statement not covered" >(action.payload.body) ? action.payload.body : null;</span>
         
         // controller and timeout
-        const msToWait        = (fetchTimeout) ? <span class="branch-0 cbranch-no" title="branch not covered" >fetchTimeout </span>: 4000;
-        const abortController = new AbortController();
-        const timeoutId       = setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {<span class="cstat-no" title="statement not covered" >abortController.abort()}</span>, msToWait);
+        const msToWait        = <span class="cstat-no" title="statement not covered" >(fetchTimeout) ? fetchTimeout : 4000;</span>
+        const abortController = <span class="cstat-no" title="statement not covered" >new AbortController();</span>
+        const timeoutId       = <span class="cstat-no" title="statement not covered" >setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {<span class="cstat-no" title="statement not covered" >abortController.abort()}</span>, msToWait);</span>
         
         // send request
-        const response = yield fetch(fetchApi, {
+        const response = <span class="cstat-no" title="statement not covered" >yield fetch(fetchApi, {</span>
             method : fetchMethod,
             headers: fetchHeaders,
             body   : fetchBody,
             signal : abortController.signal,
         });
-        clearTimeout(timeoutId);
+<span class="cstat-no" title="statement not covered" >        clearTimeout(timeoutId);</span>
         
         // request error =&gt; throw error
-        <span class="missing-if-branch" title="if path not taken" >I</span>if (!response.ok) <span class="cstat-no" title="statement not covered" >throw new Error('Request failed!');</span>
+<span class="cstat-no" title="statement not covered" >        if (!response.ok) <span class="cstat-no" title="statement not covered" >throw new Error('Request failed!');</span></span>
         
         // request success =&gt; return data
-        const responseData = yield response.json();
+        const responseData = <span class="cstat-no" title="statement not covered" >yield response.json();</span>
         
         // construct table to return
-        const info = [{
+        const info = <span class="cstat-no" title="statement not covered" >[{</span>
             id           : responseData.episode_id,
             episode      : responseData.episode_id,
             title        : responseData.title,
@@ -238,7 +238,7 @@ function* watchToFetchFilmInfoSaga (action) {
         }];
         
         // return success
-        yield put(fetchFilmInfoSuccess(info));
+<span class="cstat-no" title="statement not covered" >        yield put(fetchFilmInfoSuccess(info));</span>
     } catch (error) {
         const errorMessageToReturn = <span class="cstat-no" title="statement not covered" >(error.name === 'AbortError') ? 'abort' : error;</span>
 <span class="cstat-no" title="statement not covered" >        yield put(fetchFilmInfoFail(errorMessageToReturn));</span>
@@ -253,7 +253,7 @@ export default watchToFetchFilmInfoSaga;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jun 09 2022 18:20:22 GMT+0300 (Eastern European Summer Time)
+                at Thu Jun 09 2022 19:04:16 GMT+0300 (Eastern European Summer Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

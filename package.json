@@ -28,18 +28,23 @@
     "test-cov": "react-scripts test --coverage --watchAll --testPathIgnorePatterns=exclude",
     "test:watch": "react-scripts test --watch --testPathIgnorePatterns=exclude ----detectOpenHandles ",
     "eject": "react-scripts eject",
-    "clean:install": "rm -rf node_modules && npm cache clean --force && npm install"
+    "clean:install": "rm -rf node_modules && npm cache clean --force && npm install",
+    "cy:open": "cypress open --browser chrome ",
+    "cy:headless": "cypress run --browser chrome",
+    "cy:report": "nyc report --reporter=json"
   },
   "nyc": {
     "all": true,
     "include": [
-      "src/components/**/*.js",
-      "src/sagas/*.js",
-      "src/store/*.js",
-      "src/App.js",
-      "src/index.js"
+      "src/**/*.js"
     ],
-    "exclude": "src/pages/Film.js"
+    "exclude": [
+      "**/*.test.js",
+      "**/test.js",
+      "**/*.stories.js",
+      "**/stories.js",
+      "src/setupTests.js"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
