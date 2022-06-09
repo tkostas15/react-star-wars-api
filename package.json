@@ -22,13 +22,24 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test --testPathIgnorePatterns=exclude",
     "test-cov": "react-scripts test --coverage --watchAll --testPathIgnorePatterns=exclude",
     "test:watch": "react-scripts test --watch --testPathIgnorePatterns=exclude ----detectOpenHandles ",
     "eject": "react-scripts eject",
     "clean:install": "rm -rf node_modules && npm cache clean --force && npm install"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/components/**/*.js",
+      "src/sagas/*.js",
+      "src/store/*.js",
+      "src/App.js",
+      "src/index.js"
+    ],
+    "exclude": "src/pages/Film.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -71,11 +82,16 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.17.12",
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/instrument-cra": "^1.4.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
+    "babel-plugin-istanbul": "^6.1.1",
+    "cypress": "^10.0.3",
     "date-fns": "^2.28.0",
     "formik": "^2.2.9",
-    "msw": "^0.42.0"
+    "msw": "^0.42.0",
+    "nyc": "^15.1.0"
   }
 }
