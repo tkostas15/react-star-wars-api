@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.21% </span>
+                <span class="strong">42.1% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/19</span>
+                <span class='fraction'>8/19</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/7</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">53.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/15</span>
+                <span class='fraction'>8/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -105,23 +105,23 @@
 <a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -132,15 +132,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createSlice } from "@reduxjs/toolkit";
 &nbsp;
 // initial state
@@ -154,13 +154,13 @@ const filmSlice = createSlice({
   name: "filmInfo",
   initialState: initialState,
   reducers: {
-    fetchFilmInfoStart(state, action) {
-      state.sending = true;
+<span class="fstat-no" title="function not covered" >    fe</span>tchFilmInfoStart(state, action) {
+<span class="cstat-no" title="statement not covered" >      state.sending = true;</span>
     },
-    fetchFilmInfoSuccess(state, action) {
-      state.sending = false;
-      state.atLeastOneFetch = true;
-      state.fetchedInfo = action.payload;
+<span class="fstat-no" title="function not covered" >    fe</span>tchFilmInfoSuccess(state, action) {
+<span class="cstat-no" title="statement not covered" >      state.sending = false;</span>
+<span class="cstat-no" title="statement not covered" >      state.atLeastOneFetch = true;</span>
+<span class="cstat-no" title="statement not covered" >      state.fetchedInfo = action.payload;</span>
     },
 <span class="fstat-no" title="function not covered" >    fe</span>tchFilmInfoFail(state, action) {
 <span class="cstat-no" title="statement not covered" >      state.sending = false;</span>
@@ -176,10 +176,10 @@ export const { fetchFilmInfoStart, fetchFilmInfoSuccess, fetchFilmInfoFail } =
   filmSlice.actions;
 &nbsp;
 // export selectors
-export const getFetchedInfo = ({ film }) =&gt; film.fetchedInfo;
-export const getIsSending = ({ film }) =&gt; film.sending;
-export const getError = ({ film }) =&gt; film.error;
-export const getIfFetched = ({ film }) =&gt; film.atLeastOneFetch;
+export const getFetchedInfo = <span class="fstat-no" title="function not covered" >({</span> film }) =&gt; <span class="cstat-no" title="statement not covered" >film.fetchedInfo;</span>
+export const getIsSending = <span class="fstat-no" title="function not covered" >({</span> film }) =&gt; <span class="cstat-no" title="statement not covered" >film.sending;</span>
+export const getError = <span class="fstat-no" title="function not covered" >({</span> film }) =&gt; <span class="cstat-no" title="statement not covered" >film.error;</span>
+export const getIfFetched = <span class="fstat-no" title="function not covered" >({</span> film }) =&gt; <span class="cstat-no" title="statement not covered" >film.atLeastOneFetch;</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -187,7 +187,7 @@ export const getIfFetched = ({ film }) =&gt; film.atLeastOneFetch;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jun 09 2022 12:45:09 GMT+0300 (Eastern European Summer Time)
+                at Thu Jun 09 2022 19:04:16 GMT+0300 (Eastern European Summer Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

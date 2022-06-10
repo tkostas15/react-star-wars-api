@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -103,64 +103,64 @@
 <a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1500x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">500x</span>
+<span class="cline-any cline-yes">500x</span>
+<span class="cline-any cline-yes">500x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">500x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import "./Stars.css";
 import Star from "./Star";
 &nbsp;
-const Stars = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; {</span>
-  let starsContent = <span class="cstat-no" title="statement not covered" >[];</span>
+const Stars = (props) =&gt; {
+  let starsContent = [];
 &nbsp;
   // Get random number
-  const getRandomNumberWithTopBoundary = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(b</span>dr) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    return Math.floor(Math.random() * bdr) + 1;</span>
+  const getRandomNumberWithTopBoundary = (bdr) =&gt; {
+    return Math.floor(Math.random() * bdr) + 1;
   };
 &nbsp;
   // For the number of stars wanted, create them
   let dimensionOfStar, opacityOfStar, positionOfStar;
-<span class="cstat-no" title="statement not covered" >  for (let counter = <span class="cstat-no" title="statement not covered" >1;</span> counter &lt;= props.numberOfStars; counter++) {</span>
+  for (let counter = 1; counter &lt;= props.numberOfStars; counter++) {
     // Calculate each star's options (dimensions, opacity, position)
-<span class="cstat-no" title="statement not covered" >    dimensionOfStar = getRandomNumberWithTopBoundary(props.maxDimension);</span>
-<span class="cstat-no" title="statement not covered" >    opacityOfStar = Math.random();</span>
-<span class="cstat-no" title="statement not covered" >    positionOfStar = {</span>
+    dimensionOfStar = getRandomNumberWithTopBoundary(props.maxDimension);
+    opacityOfStar = Math.random();
+    positionOfStar = {
       posX: getRandomNumberWithTopBoundary(window.innerWidth),
       posY: getRandomNumberWithTopBoundary(window.innerHeight),
     };
 &nbsp;
     // Store each star in an array
-<span class="cstat-no" title="statement not covered" >    starsContent.push(</span>
+    starsContent.push(
       &lt;Star
         key={counter}
         dimension={dimensionOfStar}
@@ -170,7 +170,7 @@ const Stars = <span class="cstat-no" title="statement not covered" ><span class=
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return &lt;div className="stars"&gt;{starsContent}&lt;/div&gt;;</span>
+  return &lt;div className="stars"&gt;{starsContent}&lt;/div&gt;;
 };
 &nbsp;
 export default Stars;
@@ -181,7 +181,7 @@ export default Stars;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jun 09 2022 12:45:09 GMT+0300 (Eastern European Summer Time)
+                at Thu Jun 09 2022 19:04:16 GMT+0300 (Eastern European Summer Time)
             </div>
         <script src="../../../prettify.js"></script>
         <script>
