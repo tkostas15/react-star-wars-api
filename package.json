@@ -28,7 +28,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts -r @cypress/instrument-cra start",
+    "start": "REACT_APP_ENV=`development` react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test --testPathIgnorePatterns=exclude",
     "test-cov": "react-scripts test --coverage --watchAll --testPathIgnorePatterns=exclude",
@@ -113,5 +113,8 @@
     "msw": "^0.42.1",
     "nyc": "^15.1.0",
     "ts-node": "^10.8.1"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

@@ -19,15 +19,9 @@ import "@cypress/code-coverage/support";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-import { worker } from "../../src/mocks/browser";
-Cypress.on("test:before:run:async", async () => {
-  if (window.msw) {
-    console.log("MSW is already running.");
-  }
-
-  //if MSW wasnt started by the app, Cypress needs to start it
-  if (!window.msw) {
-    console.log("MSW has not been started. Starting now.");
-    await worker.start();
-  }
+Cypress.on("uncaught:exception", (err, runnable) => {
+  console.log("err----------->", err);
+  // returning false here prevents Cypress from
+  // failing the test
+  return false;
 });
