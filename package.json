@@ -34,7 +34,7 @@
     "test-cov": "react-scripts test --coverage --watchAll --testPathIgnorePatterns=exclude",
     "test:watch": "react-scripts test --watch --testPathIgnorePatterns=exclude ----detectOpenHandles ",
     "eject": "react-scripts eject",
-    "clean:install": "rm -rf node_modules && npm cache clean --force && npm install",
+    "clean:install": "rm -rf node_modules && npm cache clean --force && npm install --legacy-peer-deps",
     "cy:open": "cypress open --browser chrome ",
     "cy:headless": "cypress run --browser chrome",
     "cy:report": "nyc report --reporter=html",
