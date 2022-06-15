@@ -1,12 +1,12 @@
 import Button from "../UI/Button";
-import { Fragment } from "react";
+import { Fragment, ReactElement } from "react";
 import { useDispatch } from "react-redux";
 import { loginStart } from "../../store/authSlice";
 import { useFormik, FormikErrors } from "formik";
 
 const styles = require("./LogInForm.module.css");
 
-const LogInForm = () => {
+const LogInForm = (): ReactElement => {
   // redux dispatcher
   const dispatchAction = useDispatch();
 

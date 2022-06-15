@@ -1,12 +1,14 @@
+import { ReactElement } from "react";
+import { SpinnerProps } from "../../types/AllTypes";
 const styles = require("./Spinner.module.css");
 
-const Spinner = (props: any): any => {
+const Spinner: React.FC<SpinnerProps> = ({ icon, ms }): ReactElement => {
   return (
     <div className={styles.spinner}>
       <img
         alt="Waiting for the API"
-        src={props.icon}
-        style={{ animationDuration: props.ms + "ms" || "2000ms" }}
+        src={icon}
+        style={{ animationDuration: ms + "ms" || "2000ms" }}
       />
     </div>
   );

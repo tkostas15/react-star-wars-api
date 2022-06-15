@@ -1,14 +1,22 @@
+import { ReactElement } from "react";
+import { UIButtonProps } from "../../types/AllTypes";
 const styles = require("./Button.module.css");
 
-const Button = (props: any): any => {
+const Button: React.FC<UIButtonProps> = ({
+  type,
+  disabled,
+  onClick,
+  children,
+  className = "",
+}): ReactElement => {
   return (
     <button
-      type={props.type || "button"}
-      disabled={props.disabled || false}
-      className={`${styles.button} ${props.className || ""}`}
-      onClick={props.onClick}
+      type={type || "button"}
+      disabled={disabled || false}
+      className={`${styles.button} ${className || ""}`}
+      onClick={onClick}
     >
-      {props.children}
+      {children}
     </button>
   );
 };

@@ -2,15 +2,13 @@ import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
 import BootstrapTable, { ColumnFormatter } from "react-bootstrap-table-next";
 import filterFactory, { textFilter } from "react-bootstrap-table2-filter";
-import { Fragment } from "react";
+import { Fragment, ReactElement } from "react";
 import { format, parseISO } from "date-fns";
 import { Link } from "react-router-dom";
+import { FilmsTableProps } from "../../types/AllTypes";
 const styles = require("./FilmsTable.module.css");
 
-const FilmsTable = (props: any): any => {
-  // Create the bootstrap table
-  let filmsTable = props.films;
-
+const FilmsTable: React.FC<FilmsTableProps> = ({ films }): ReactElement => {
   // column formatters
   const producerFormatter: ColumnFormatter<any, any, string> = (
     cell,
@@ -100,7 +98,7 @@ const FilmsTable = (props: any): any => {
       <BootstrapTable
         classes={styles.table}
         keyField="title"
-        data={filmsTable}
+        data={films}
         columns={columns}
         filter={filterFactory()}
       />

@@ -68,10 +68,10 @@ const Films = () => {
           <Modal
             description={errorDescription}
             button="Retry"
-            onClick={retryHandler}
+            onButtonClick={retryHandler}
           />
         )}
-        {httpIsSending && <Spinner icon={spinnerIcon} ms="1500" />}
+        {httpIsSending && <Spinner icon={spinnerIcon} ms={1500} />}
       </main>
       <Footer />
     </Fragment>

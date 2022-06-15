@@ -1,10 +1,11 @@
 // imports
+import { ReactElement } from "react";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import LogInForm from "../components/LogIn/LogInForm";
 import { getIsAuthenticatedUsingLocalStorage } from "../store/authSlice";
 
-const Welcome = (props: any): any => {
+const Welcome = (): ReactElement => {
   // redux selector
   const isAuthenticated: boolean = useSelector(
     getIsAuthenticatedUsingLocalStorage

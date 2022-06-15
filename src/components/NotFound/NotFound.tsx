@@ -1,6 +1,7 @@
+import { ReactElement } from "react";
 const styles = require("./NotFound.module.css");
 
-const NotFound = (): any => {
+const NotFound = (): ReactElement => {
   return (
     <section className={styles.notFound}>
       <h1>404</h1>

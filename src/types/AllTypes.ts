@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 // store slices
 export interface AuthSlice {
   isAuthenticated: boolean;
@@ -60,4 +62,42 @@ export interface StoreSlices {
   auth: AuthSlice;
   films: FilmsSlice;
   film: FilmSlice;
+}
+
+// props
+export interface FilmsTableProps {
+  films: Array<FilmObject>;
+}
+export interface FilmInfoProps {
+  info: Array<FilmObject>;
+}
+export interface HeaderProps {
+  hasBack: number;
+  onClickBack?: () => void;
+}
+export interface StarsProps {
+  numberOfStars: number;
+  maxDimension: number;
+}
+export interface SingleStarProps {
+  dimension: number;
+  opacity: number;
+  position: { posX: number; posY: number };
+}
+export interface SpinnerProps {
+  icon: string;
+  ms: number;
+}
+export interface ModalProps {
+  description: ReactElement | undefined;
+  button: string;
+  onButtonClick?: () => void;
+  className?: string;
+}
+export interface UIButtonProps {
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  className?: string;
+  onClick?: () => void;
+  children: ReactElement | string;
 }

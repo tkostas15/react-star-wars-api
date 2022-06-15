@@ -1,14 +1,12 @@
 import { format, parseISO } from "date-fns";
-import { Fragment } from "react";
+import { Fragment, ReactElement } from "react";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
 import BootstrapTable, { ColumnFormatter } from "react-bootstrap-table-next";
+import { FilmInfoProps } from "../../types/AllTypes";
 const styles = require("./FilmInfo.module.css");
 
-const FilmInfo = (props: any): any => {
-  // info set up
-  const info = props.info;
-
+const FilmInfo: React.FC<FilmInfoProps> = ({ info }): ReactElement => {
   // bootstrap formatters
   const producerFormatter: ColumnFormatter<any, any, string> = (
     cell,

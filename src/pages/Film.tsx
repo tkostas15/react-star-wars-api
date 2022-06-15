@@ -17,7 +17,7 @@ import {
 } from "../store/filmSlice";
 import { FilmObject } from "../types/AllTypes";
 
-const Film = (props: any) => {
+const Film = () => {
   // get router parameters
   const routerParams = useParams();
 
@@ -79,10 +79,10 @@ const Film = (props: any) => {
           <Modal
             description={errorDescription}
             button="retry"
-            onClick={retryHandler}
+            onButtonClick={retryHandler}
           />
         )}
-        {httpIsSending && <Spinner icon={loadSpinner} ms="1500" />}
+        {httpIsSending && <Spinner icon={loadSpinner} ms={1500} />}
       </main>
       <Footer />
     </Fragment>

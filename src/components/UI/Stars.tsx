@@ -1,7 +1,12 @@
 import "./Stars.css";
 import Star from "./Star";
+import { ReactElement } from "react";
+import { StarsProps } from "../../types/AllTypes";
 
-const Stars = (props: any): any => {
+const Stars: React.FC<StarsProps> = ({
+  numberOfStars,
+  maxDimension,
+}): ReactElement => {
   let starsContent = [];
 
   // Get random number
@@ -11,9 +16,9 @@ const Stars = (props: any): any => {
 
   // For the number of stars wanted, create them
   let dimensionOfStar, opacityOfStar, positionOfStar;
-  for (let counter = 1; counter <= props.numberOfStars; counter++) {
+  for (let counter = 1; counter <= numberOfStars; counter++) {
     // Calculate each star's options (dimensions, opacity, position)
-    dimensionOfStar = getRandomNumberWithTopBoundary(props.maxDimension);
+    dimensionOfStar = getRandomNumberWithTopBoundary(maxDimension);
     opacityOfStar = Math.random();
     positionOfStar = {
       posX: getRandomNumberWithTopBoundary(window.innerWidth),

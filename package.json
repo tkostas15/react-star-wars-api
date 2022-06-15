@@ -52,6 +52,7 @@
       "**/*.stories.{ts,js,tsx,jsx}",
       "**/stories.{ts,js,tsx,jsx}",
       "src/setupTests.{ts,js,tsx,jsx}",
+      "src/types/*.{ts,js,tsx,jsx}",
       "src/hooks/**/*.{ts,js,tsx,jsx}",
       "src/mocks/**/*.{ts,js,tsx,jsx}",
       "src/test-utils/**/*.{ts,js,tsx,jsx}",

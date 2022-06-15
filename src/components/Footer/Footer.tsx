@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faJedi } from "@fortawesome/free-solid-svg-icons/faJedi";
+import { ReactElement } from "react";
 const styles = require("./Footer.module.css");
 
-const Footer = (): any => {
+const Footer = (): ReactElement => {
   return (
     <footer className={styles.footer}>
       <div>
