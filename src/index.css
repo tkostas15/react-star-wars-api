@@ -20,5 +20,15 @@ body {
     url("./fonts/Starjedi.ttf");
   font-weight: 400;
 }
-main {width : 100%;flex : 1;}
-#root {min-height: 100vh; display : flex;display : -webkit-flex;justify-content : space-between;align-items: center;flex-direction : column;}
+main {
+  width: 100%;
+  flex: 1;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
