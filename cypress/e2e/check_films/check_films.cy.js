@@ -1,6 +1,14 @@
 /// <reference types="cypress" />
+import { mockHandlers } from "./exclude/mockHandlers";
 
 describe("Log in and manipulate Films table", () => {
+  // use specific handler for msw
+  before("use msw server needed", () => {
+    const { worker } = window.msw;
+    worker.resetHandlers();
+    worker.use(...mockHandlers);
+  });
+
   // log in
   beforeEach("log in", () => {
     cy.logIn();

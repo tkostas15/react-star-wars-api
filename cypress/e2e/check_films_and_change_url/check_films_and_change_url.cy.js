@@ -1,6 +1,14 @@
 /// <reference types='cypress' />
+import { mockHandlers } from "./exclude/mockHandlers";
 
 describe("1) login and check films table, 2) alter url manually, 3) check table and go back ", () => {
+  // use specific handler for msw
+  before("use msw server needed", () => {
+    const { worker } = window.msw;
+    worker.resetHandlers();
+    worker.use(...mockHandlers);
+  });
+
   // login
   beforeEach("log in", () => {
     // root
