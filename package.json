@@ -56,7 +56,9 @@
       "src/hooks/**/*.{ts,js,tsx,jsx}",
       "src/mocks/**/*.{ts,js,tsx,jsx}",
       "src/test-utils/**/*.{ts,js,tsx,jsx}",
-      "src/pages/__tests__/**/*.{ts,js,tsx,jsx}"
+      "src/pages/__tests__/**/*.{ts,js,tsx,jsx}",
+      "src/cypress/**/*.{ts,js,tsx,jsx}",
+      "src/src/types/**/*.{ts,js,tsx,jsx}"
     ],
     "excludeAfterRemap": false
   },
@@ -78,7 +80,11 @@
       "<rootDir>/build/",
       "<rootDir>/node_modules/",
       "<rootDir>/src/pages/__tests__/exclude",
-      "<rootDir>/src/hooks"
+      "<rootDir>/src/types/",
+      "<rootDir>/src/hooks",
+      "<rootDir>/src/test-utils/",
+      "<rootDir>/src/setupTests.{ts,js,tsx,jsx}",
+      "<rootDir>/cypress"
     ]
   },
   "eslintConfig": {
