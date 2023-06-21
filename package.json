@@ -31,7 +31,7 @@
     "start": "REACT_APP_ENV=`development` react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test --testPathIgnorePatterns=exclude",
-    "test-cov": "react-scripts test --coverage --watchAll --testPathIgnorePatterns=exclude",
+    "test:cov": "react-scripts test --coverage --watchAll --testPathIgnorePatterns=exclude",
     "test:watch": "react-scripts test --watch --testPathIgnorePatterns=exclude ----detectOpenHandles ",
     "eject": "react-scripts eject",
     "clean:install": "rm -rf node_modules && npm cache clean --force && npm install --legacy-peer-deps",
