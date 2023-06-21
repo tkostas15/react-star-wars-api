@@ -1,6 +1,6 @@
 # Intro
 
-This is a `ReactJS` app that uses the `SWAPI`, for practice/education purpose.  
+This is a `ReactJS` app that uses the [SWAPI](https://swapi.dev/), for practice/education purpose.  
 It retrieves and displays films using the free API above.
 
 ## Code review
@@ -57,7 +57,14 @@ To run the dev server, you must type
 ```
 npm run start
 ```
-:information_source: The dev server's default port is `3000`.
+:information_source: The dev server's default port is `3000`.  
+
+:warning: In order to be able to run the dev server, you must use the node version `16.15.1`.
+
+:warning: For Windows users, you must replace the `start` command with the one below
+```
+Set REACT_APP_ENV=dev && react-scripts -r @cypress/instrument-cra start
+```
 
 In order to build the app, you must type
 ```
