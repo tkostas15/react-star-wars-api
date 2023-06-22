@@ -1,15 +1,17 @@
 // react-testing-library renders your components to document.body,
-// this adds jest-dom's custom assertions
 import "@testing-library/jest-dom";
-import { server } from "./mocks/server";
-// Establish API mocking before all tests.
-beforeAll(() => {
-  server.listen();
-});
 
-// Reset any request handlers that we may add during the tests,
-// so they don't affect other tests.
-afterEach(() => server.resetHandlers());
+// Polyfill "window.fetch" to get rid of error 'ReferenceError: fetch is not defined'
+import 'whatwg-fetch'
 
-// Clean up after the tests are finished.
-afterAll(() => server.close());
+// MSW server
+import {mswServer} from "./mocks/server";
+import React from 'react';
+
+beforeAll(() => mswServer.listen());
+afterEach(() => mswServer.resetHandlers());
+afterAll(() => mswServer.close());
+
+global.React = React;
+
+

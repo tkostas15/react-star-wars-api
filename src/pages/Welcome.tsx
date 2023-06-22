@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 import LogInForm from "../components/LogIn/LogInForm";
 import { getIsAuthenticatedUsingLocalStorage } from "../store/authSlice";
 
-const Welcome = (): ReactElement => {
+const Welcome = () => {
   // redux selector
   const isAuthenticated: boolean = useSelector(
     getIsAuthenticatedUsingLocalStorage

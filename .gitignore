@@ -124,3 +124,7 @@ dist
 
 # coverage
 /coverage/
+/coverage-jest/
+/coverage-cypress/
+/.nyc_output/
+/coverage-merged/

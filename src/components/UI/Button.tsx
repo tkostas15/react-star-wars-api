@@ -1,8 +1,8 @@
-import { ReactElement } from "react";
+import { ReactElement, FC } from "react";
 import { UIButtonProps } from "../../types/AllTypes";
-const styles = require("./Button.module.css");
+import styles from "./Button.module.css";
 
-const Button: React.FC<UIButtonProps> = ({
+const Button: FC<UIButtonProps> = ({
   type,
   disabled,
   onClick,
