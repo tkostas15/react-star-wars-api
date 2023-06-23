@@ -93,3 +93,7 @@ In order to build the app, you must type
 npm run build
 ```
 
+## Font
+
+The font used is the `Star Jedi` provided by `DAFONT FREE`.  
+It is free for commercial use, and you can find it [here](https://www.dafontfree.io/star-jedi-font-family/).
