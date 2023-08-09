@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 
 const useHttp = () => {
   // states
-  const [httpError, setHttpError] = useState("");
+  const [httpError, setHttpError]         = useState("");
   const [httpIsSending, setHttpIsSending] = useState(true);
 
   // constants
@@ -30,19 +30,19 @@ const useHttp = () => {
         setHttpError("");
 
         // fetch timeout
-        const msToTimeout = requestConfig.timeout
-          ? requestConfig.timeout
-          : msToWait;
+        const msToTimeout     = requestConfig.timeout
+                                ? requestConfig.timeout
+                                : msToWait;
         const abortController = new AbortController();
-        const timeoutId = setTimeout(() => {
+        const timeoutId       = setTimeout(() => {
           abortController.abort();
         }, msToTimeout);
 
         // send request
         const httpResponse = await fetch(requestConfig.url, {
-          method: requestConfig.method ? requestConfig.method : "GET",
-          headers: requestConfig.headers ? requestConfig.headers : {},
-          body: requestConfig.body ? requestConfig.body : null,
+          method: requestConfig.method || "GET",
+          headers: requestConfig.headers || {},
+          body: requestConfig.body || null,
           signal: abortController.signal,
         });
         clearTimeout(timeoutId);
@@ -53,10 +53,11 @@ const useHttp = () => {
         // else collect data returned in json format
         const responseData = await httpResponse.json();
         dataHandler(responseData);
-      } catch (error) {
+      }
+      catch (error) {
         if (error instanceof Error) {
           const errorMessageToReturn =
-            error.name === "AbortError" ? "abort" : "error";
+                  error.name === "AbortError" ? "abort" : "error";
           setHttpError(errorMessageToReturn);
         }
         setHttpError("error");

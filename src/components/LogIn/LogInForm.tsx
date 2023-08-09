@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { loginStart } from "../../store/authSlice";
 import { useFormik, FormikErrors } from "formik";
 
-const styles = require("./LogInForm.module.css");
+import styles from "./LogInForm.module.css";
 
 const LogInForm = (): ReactElement => {
   // redux dispatcher
